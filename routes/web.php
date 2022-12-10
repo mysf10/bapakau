@@ -57,12 +57,7 @@ Route::get('/list', function () {
 });
 
 Route::get('/book', [BukuController::class, 'index']);
-
-Route::get('/checkout', function () {
-    return view('checkout', [
-        'title' => 'Checkout'
-    ]);
-});
+Route::get('/book/{slug:judul_buku}', [BukuController::class, 'checkout']);
 
 Route::get('/history', function () {
     return view('history', [

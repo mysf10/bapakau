@@ -20,6 +20,15 @@ class BukuController extends Controller
         ]);
     }
 
+    public function checkout(Buku $slug)
+    {
+        return view('checkout', [
+            'title' => 'Checkout',
+            'slug' => $slug
+        ]);
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *

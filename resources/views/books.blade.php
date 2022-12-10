@@ -19,7 +19,7 @@
     @foreach ($books as $buku)
 
     <article class="mb-3">
-      <a href="/checkout/{{ $buku->id }}"><h2>{{ $buku->judul_buku }}</h2></a>
+      <h2><a href="/book/{{ $buku->judul_buku }}">{{ $buku->judul_buku }}</a></h2>
       <p>{{ $buku->genre_buku }}</p>
       <p>{{ $buku->pengarang_buku }}</p>
       <p>{{ $buku->penerbit_buku }}</p>
