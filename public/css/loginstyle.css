@@ -1,0 +1,88 @@
+body {
+
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?cs=srgb&dl=pexels-pixabay-53594.jpg&fm=jpg");
+  background-size: fill;
+}
+a {
+  color: #B0D6F5;
+}
+#roundedinputbox {
+  border-radius: 17px;
+  border: 1px solid #B0D6F5;
+  padding: 10px;
+  width: 300px;
+  color: #09B1EC;
+  font-size: 16px; 
+}
+#roundedinputbox:focus {
+  outline: none;
+}
+#loginbutton {
+  border-radius: 17px;
+  border: 1px solid #0487E2;
+  padding: 10px;
+  width: 125px;
+  color: default;
+  font-size: 16px;
+  background-color: #0487E2;
+  font-weight: 750;
+  display: block;
+  margin: 0 auto;
+  color: whitesmoke  ;
+}
+#loginbutton:focus {
+  outline: none;
+}
+#loginbutton:hover {
+  background-color: #B0D6F5;
+  border: 1px solid #B0D6F5;
+  color: #0487E2;
+}
+#signupbutton {
+  border-radius: 17px;
+  border: 1px solid #0487E2;
+  padding: 10px;
+  width: 125px;
+  color: default;
+  font-size: 16px;
+  background-color: #0487E2;
+  font-weight: 750;
+  display: block;
+  margin: 0 auto;
+  color: whitesmoke  ;
+}
+#signupbutton:focus {
+  outline: none;
+}
+#signupbutton:hover {
+  background-color: #B0D6F5;
+  border: 1px solid #B0D6F5;
+  color: #0487E2;
+}
+#loginbox, #signupbox {
+  background-color: #B0D6F5;
+  border-radius: 17px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+#loginbox > * {
+  margin-bottom: 1px;
+}
+h1 {
+  margin: 0 auto; 
+  text-align: center;
+} 
+
+
+
+
+
+
+
+
+
+
