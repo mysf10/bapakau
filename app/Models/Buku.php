@@ -9,6 +9,6 @@ class Buku extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'isbn';
+    // protected $primaryKey = 'isbn';
 }
 

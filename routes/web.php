@@ -14,19 +14,19 @@ use App\Http\Controllers\BukuController;
 |
 */
 
-Route::post('/login', function () {
+Route::get('/login', function () {
     return view('login', [
         'title' => 'Login'
     ]);        
 });
 
-Route::post('/', function () {
+Route::get('/', function () {
     return view('login', [
         'title' => 'Login'
     ]);
 });
 
-Route::post('/signup', function () {
+Route::get('/signup', function () {
     return view('signup', [
         'title' => 'Sign Up'
     ]);

@@ -21,7 +21,7 @@
   <input type="password" name="password" id="roundedinputbox">
     <br>
 
-          <form action="/home">
+          <form action="/login">
             <button type="submit" id="signupbutton">SIGN IN</button> 
           </form>
 </body>
