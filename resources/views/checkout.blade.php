@@ -13,21 +13,7 @@
   </head>
   <body>
   <div class="container mt-4">
-
-    {{-- INI BAGIAN YANG DIMODIFIKASI DARI ISI WEBSITE --}}
-  
-    @foreach ($books as $buku)
-
-    <article class="mb-3">
-      <a href="/checkout/{{ $buku->id }}"><h2>{{ $buku->judul_buku }}</h2></a>
-      <p>{{ $buku->genre_buku }}</p>
-      <p>{{ $buku->pengarang_buku }}</p>
-      <p>{{ $buku->penerbit_buku }}</p>
-      <p>{{ $buku->bahasa_buku }}</p>
-    </article>
-        
-    @endforeach
-  
+    <h1>Ini adalah halaman checkout</h1>
   </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
