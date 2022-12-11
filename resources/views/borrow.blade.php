@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/background.css">
   </head>
   <body>
+
+    <form action="/home">
+      <button type="submit" id="backbutton">Back</button> 
+    </form>
   <div class="container mt-4">
     <input type="text" name="username" id="roundedinputbox">
     <form action="/list">

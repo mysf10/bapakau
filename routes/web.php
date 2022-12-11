@@ -44,6 +44,13 @@ Route::get('/profile', function () {
     ]);
 });
 
+Route::get('/delete', function () { 
+    return view('delete', [
+        'title' => 'Delete'
+    ]);
+
+});
+
 Route::get('/borrow', function () {
     return view('borrow', [
         'title' => 'Borrowing'

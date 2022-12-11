@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/background.css">
   </head>
   <body>
+
+    <form action="/borrow">
+      <button type="submit" id="backbutton">Back</button> 
+    </form>
   <div class="container mt-4">
     <h1><a href="/book">Perpustakaan Libofly</a></h1>
   </div>

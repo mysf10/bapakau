@@ -14,6 +14,10 @@
   <body>
   <div class="container mt-4">
 
+    <form action="/book">
+      <button type="submit" id="backbutton">Back</button> 
+    </form>
+
       {{-- INI BAGIAN YANG DIMODIFIKASI DARI ISI WEBSITE --}}
 
     <h2>{{ $slug->judul_buku }}</h2>
@@ -22,7 +26,7 @@
     <p>{{ $slug->penerbit_buku }}</p>
     <p>{{ $slug->bahasa_buku }}</p>
 
-    <form action="/bcode">
+    <form action="/history">
       <button type="submit" id="loginbutton">Checkout</button> 
    </form>
 
