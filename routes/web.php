@@ -14,60 +14,14 @@ use App\Http\Controllers\BukuController;
 |
 */
 
-Route::get('/login', function () {
-    return view('login', [
-        'title' => 'Login'
-    ]);        
-});
-
-Route::get('/', function () {
-    return view('login', [
-        'title' => 'Login'
-    ]);
-});
-
-Route::get('/signup', function () {
-    return view('signup', [
-        'title' => 'Sign Up'
-    ]);
-});
-
-Route::get('/home', function () {
-    return view('home', [
-        'title' => 'Home'
-    ]);
-});
-
-Route::get('/profile', function () {
-    return view('profile', [
-        'title' => 'Profile'
-    ]);
-});
-
-Route::get('/delete', function () { 
-    return view('delete', [
-        'title' => 'Delete'
-    ]);
-
-});
-
-Route::get('/borrow', function () {
-    return view('borrow', [
-        'title' => 'Borrowing'
-    ]);
-});
-
-Route::get('/list', function () {
-    return view('list', [
-        'title' => 'List'
-    ]);
-});
-
+Route::get('/', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index']);
+Route::get('/signup', [SignupController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
+Route::get('/profile', [ProfileController::class, 'index']);
+Route::get('/delete', [DeleteController::class, 'index']);
+Route::get('/borrow', [BorrowController::class, 'index']);
+Route::get('/list', [ListController::class, 'index']);
 Route::get('/book', [BukuController::class, 'index']);
 Route::get('/book/{slug:judul_buku}', [BukuController::class, 'checkout']);
-
-Route::get('/history', function () {
-    return view('history', [
-        'title' => 'History'
-    ]);
-});
+Route::get('/history', [HistoryController::class, 'index']);

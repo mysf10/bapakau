@@ -13,7 +13,9 @@
   </head>
   <body>
   <div class="container mt-4">
-    
+    <form action="/login">
+      <button type="submit" id="logoutbutton">LOG OUT</button> 
+    </form>
 <form action="/profile">
   <button type="submit" id="profilebutton">PROFILE</button> 
 </form>
