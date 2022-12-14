@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('bukus', function (Blueprint $table) {
             $table->id('isbn')->nullable(false)->unique();
-            $table->string('kode_rak_buku', 10)->nullable(false);
+            $table->string('kode_rak_buku', 10)->nullable(false)->references('kode_rak_buku')->on('rak_bukus')->cascadeOnUpdate()->cascadeOnDelete();;
             $table->string('judul_buku', 250);
             $table->string('genre_buku', 20);
             $table->string('pengarang_buku', 100);
             $table->string('penerbit_buku', 100);
             $table->string('bahasa_buku', 50);
-            $table->foreign('kode_rak_buku')->references('kode_rak_buku')->on('rak_bukus')->cascadeOnUpdate()->cascadeOnDelete();
+            
         });
     }
 

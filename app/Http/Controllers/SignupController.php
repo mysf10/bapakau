@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Akun_pengguna;
+use Illuminate\Routing\Controller;
 
 class SignupController extends Controller
 {
@@ -36,7 +38,22 @@ class SignupController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $validatedData = $request->validate( 
+            [
+                'nim' => 'required|unique:nim',
+                'telephone' => 'required|unique:nomor_telephone',
+                'email' => 'required|unique:email_akun|email:dns',
+                'username' => 'required|unique:username_akun',
+                'password' => 'required|unique:password_akun|min:8',
+            ],
+        );
+
+        Akun_pengguna::create($validatedData);
+
+        return view('login', [
+            'title' => 'Login',
+        ]);
     }
 
     /**
@@ -46,7 +63,7 @@ class SignupController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
+    {       
         //
     }
 

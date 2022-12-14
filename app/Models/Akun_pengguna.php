@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Akun_pengguna extends Model
 {
-    use HasFactory;
+    public $table = "akun_penggunas";
 }

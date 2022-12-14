@@ -7,22 +7,24 @@
   <link rel="stylesheet" href="css/signupstyle.css">
   <title>Digilab | {{ $title }}</title>
 </head>
-<body id="signupbox">
-  <h1>Welcome to Digilab!</h1>
-  <h3>NIM</h3>
-  <input type="text" name="username" id="roundedinputbox">
-  <h3>Telephone</h3>
-  <input type="text" name="username" id="roundedinputbox">
-  <h3>Email</h3>
-  <input type="text" name="username" id="roundedinputbox">
-  <h3>Username</h3>
-  <input type="text" name="username" id="roundedinputbox">
-  <h3>Password</h3>
-  <input type="password" name="password" id="roundedinputbox">
-    <br>
+  <body id="signupbox">
 
-          <form action="/login">
-            <button type="submit" id="signupbutton">SIGN IN</button> 
-          </form>
-</body>
+    <form action="/signup" method="post">
+      @csrf
+      <h1>Welcome to Digilab!</h1>
+      <h3>NIM</h3>
+      <input type="text" name="nim" id="roundedinputbox">
+      <h3>Telephone</h3>
+      <input type="text" name="telephone" id="roundedinputbox">
+      <h3>Email</h3>
+      <input type="email" name="email" id="roundedinputbox">
+      <h3>Username</h3>
+      <input type="text" name="username" id="roundedinputbox">
+      <h3>Password</h3>
+      <input type="password" name="password" id="roundedinputbox">
+      <br>
+      <button type="submit" id="signupbutton">SIGN IN</button> 
+    </form>
+    
+  </body>
 </html>

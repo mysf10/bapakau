@@ -2,6 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ListController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\BorrowController;
+use App\Http\Controllers\DeleteController;
+use App\Http\Controllers\SignupController;
+use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +25,7 @@ use App\Http\Controllers\BukuController;
 Route::get('/', [LoginController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/signup', [SignupController::class, 'index']);
+Route::post('/signup', [SignupController::class, 'store']);
 Route::get('/home', [HomeController::class, 'index']);
 Route::get('/profile', [ProfileController::class, 'index']);
 Route::get('/delete', [DeleteController::class, 'index']);

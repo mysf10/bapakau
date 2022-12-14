@@ -14,7 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('akun_penggunas', function (Blueprint $table) {
-            $table->string('id_akun', 50)->primary()->nullable(false)->unique();
+            $table->id('id_akun', 10)->nullable(false)->unique();
+            $table->string('nim',15);
+            $table->string('nomor_telephone', 50);
             $table->string('email_akun', 100);
             $table->string('username_akun', 100);
             $table->string('password_akun', 100);

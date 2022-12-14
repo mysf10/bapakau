@@ -14,7 +14,7 @@
   <body>
 
     <form action="/home">
-      <button type="submit" id="backbutton">Back</button> 
+      <button type="submit" class="btn btn-secondary btn-sm">Back</button> 
     </form>
   <div class="container mt-4">
     <h1>Ini adalah halaman riwayat peminjaman</h1>

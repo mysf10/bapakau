@@ -14,13 +14,13 @@
   <h3>Password</h3>
   <input type="password" name="password" id="roundedinputbox">
     <br>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><h5>Forgot your password? Click here!<h5></a>
+    <a href="https://www.youtube.com/watch?v=M3Keg5XKJO8"><h5>Forgot your password? Click here!<h5></a>
 
           <form action="/home">
              <button type="submit" id="loginbutton">LOGIN</button> 
           </form>
 
-          <form action="/signup">
+          <form action="/signup" method="get">
             <button type="submit" id="signupbutton">SIGN UP</button> 
           </form>
 </body>

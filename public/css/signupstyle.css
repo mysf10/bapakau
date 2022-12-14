@@ -30,7 +30,7 @@ a {
   font-weight: 750;
   display: block;
   margin: 0 auto;
-  color: whitesmoke  ;
+  color: whitesmoke;
 }
 #signupbutton:focus {
   outline: none;

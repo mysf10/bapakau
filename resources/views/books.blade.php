@@ -15,7 +15,7 @@
   <div class="container mt-4">
 
     <form action="/list">
-      <button type="submit" id="backbutton">Back</button> 
+      <button type="submit" class="btn btn-secondary btn-sm">Back</button> 
     </form>
 
     {{-- INI BAGIAN YANG DIMODIFIKASI DARI ISI WEBSITE --}}

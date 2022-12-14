@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Perpustakaan;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class ListController extends Controller
 {
@@ -11,10 +13,20 @@ class ListController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    
     public function index()
     {
+
+        $address = Perpustakaan::latest();
+
+        if (request('search')) {
+            $address->where('nama_perpustakaan', 'like', '%' . request('search') . '%');
+        }
+
         return view('list', [
-            'title' => 'List',
+            'title' => 'List of Libraries',
+            'address' => $address->get()
         ]);
     }
 

@@ -14,11 +14,15 @@
   <body>
 
     <form action="/borrow">
-      <button type="submit" id="backbutton">Back</button> 
+      <button type="submit" class="btn btn-secondary btn-sm">Back</button> 
     </form>
-  <div class="container mt-4">
-    <h1><a href="/book">Perpustakaan Libofly</a></h1>
-  </div>
+
+    <div class="container mt-4">
+      @foreach ($address as $alamat)
+        <h1><a href="/book">{{ $alamat->nama_perpustakaan }}</a></h1>
+        <h2>{{ $alamat->alamat_perpustakaan }}</h2>
+      @endforeach
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
