@@ -24,6 +24,7 @@ use App\Http\Controllers\ProfileController;
 
 Route::get('/', [LoginController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/signup', [SignupController::class, 'index']);
 Route::post('/signup', [SignupController::class, 'store']);
 Route::get('/home', [HomeController::class, 'index']);

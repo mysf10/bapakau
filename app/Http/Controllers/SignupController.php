@@ -39,14 +39,16 @@ class SignupController extends Controller
     public function store(Request $request)
     {
 
-        
+        // return request()->all();
+        // dd ('berhasil buat akun');
+
         $validatedData = $request->validate( 
         [
                 'nim' => 'required|unique:akun_penggunas',
                 'nomor_telephone' => 'required|unique:akun_penggunas',
                 'email_akun' => 'required|unique:akun_penggunas|email:dns',
                 'username_akun' => 'required|unique:akun_penggunas',
-                'password_akun' => 'required|unique:akun_penggunas|min:8',
+                'password_akun' => 'required|unique:akun_penggunas',
             ],
         );
 
