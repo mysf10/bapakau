@@ -39,21 +39,22 @@ class SignupController extends Controller
     public function store(Request $request)
     {
 
+        
         $validatedData = $request->validate( 
-            [
-                'nim' => 'required|unique:nim',
-                'telephone' => 'required|unique:nomor_telephone',
-                'email' => 'required|unique:email_akun|email:dns',
-                'username' => 'required|unique:username_akun',
-                'password' => 'required|unique:password_akun|min:8',
+        [
+                'nim' => 'required|unique:akun_penggunas',
+                'nomor_telephone' => 'required|unique:akun_penggunas',
+                'email_akun' => 'required|unique:akun_penggunas|email:dns',
+                'username_akun' => 'required|unique:akun_penggunas',
+                'password_akun' => 'required|unique:akun_penggunas|min:8',
             ],
         );
 
+        $validatedData['password_akun'] = bcrypt($validatedData['password_akun']);
+        
         Akun_pengguna::create($validatedData);
 
-        return view('login', [
-            'title' => 'Login',
-        ]);
+        return redirect('/login');
     }
 
     /**

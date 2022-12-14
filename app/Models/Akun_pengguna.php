@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Akun_pengguna extends Model
 {
-    public $table = "akun_penggunas";
+    use HasFactory;
+
+    protected $fillable = [
+        'nim',
+        'nomor_telephone',
+        'email_akun',
+        'username_akun',
+        'password_akun',
+    ];
 }
